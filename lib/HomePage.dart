@@ -28,10 +28,9 @@ class _homePageState extends State<homePage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-                 onPressed: () {
-                   Navigator.pop(context);
-
-                 },
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: Icon(
             Icons.arrow_back_ios,
             color: Colors.black,
@@ -90,10 +89,7 @@ class _homePageState extends State<homePage> {
                         margin: EdgeInsets.only(left: 50),
                         height: 80,
                         width: 140,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image:
-                                    AssetImage("assets/images/bannerlmg.png"))),
+                        decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/bannerlmg.png"))),
                       ),
                     )
                   ],
@@ -114,10 +110,7 @@ class _homePageState extends State<homePage> {
                     Container(
                       height: 80,
                       width: 125,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image:
-                                  AssetImage("assets/images/serviceslmg.png"))),
+                      decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/serviceslmg.png"))),
                     ),
                     Expanded(
                         child: Container(
@@ -134,14 +127,10 @@ class _homePageState extends State<homePage> {
                             child: Container(
                               decoration: BoxDecoration(
                                 gradient: gradientStyle,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(60)),
+                                borderRadius: BorderRadius.all(Radius.circular(60)),
                               ),
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 5, horizontal: 13),
-                              child: Text("Place Order",
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 15)),
+                              padding: EdgeInsets.symmetric(vertical: 5, horizontal: 13),
+                              child: Text("Place Order", style: TextStyle(color: Colors.white, fontSize: 15)),
                             ),
                           )
                         ],
@@ -208,8 +197,7 @@ class _homePageState extends State<homePage> {
                 children: [
                   Container(
                     padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                        gradient: gradientStyle, shape: BoxShape.circle),
+                    decoration: BoxDecoration(gradient: gradientStyle, shape: BoxShape.circle),
                     child: Text(
                       "+",
                       style: TextStyle(color: Colors.white, fontSize: 25),
@@ -227,19 +215,16 @@ class _homePageState extends State<homePage> {
         iconSize: 15,
         onTap: (value) => {},
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("Home")),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.track_changes), title: Text("Track Order")),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.view_list), title: Text("My Orders")),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.contacts), title: Text("Profile")),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.track_changes), label: "Track Order"),
+          BottomNavigationBarItem(icon: Icon(Icons.view_list), label: "My Orders"),
+          BottomNavigationBarItem(icon: Icon(Icons.contacts), label: "Profile"),
         ],
       ),
     );
   }
 
-  void openOrderPage(){
-       Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderPage()));
+  void openOrderPage() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => OrderPage()));
   }
 }

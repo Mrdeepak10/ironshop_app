@@ -133,13 +133,13 @@ class _trackOrderPageState extends State<trackOrderPage> {
         iconSize: 15,
         onTap: (value) => {},
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("Home")),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.track_changes), title: Text("Track Order")),
+              icon: Icon(Icons.track_changes), label: "Track Order"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.view_list), title: Text("My Orders")),
+              icon: Icon(Icons.view_list), label: "My Orders"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.contacts), title: Text("Profile")),
+              icon: Icon(Icons.contacts), label: "Profile"),
         ],
       ),
     );
